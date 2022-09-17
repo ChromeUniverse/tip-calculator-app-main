@@ -17,7 +17,7 @@ function Calculator(props) {
         </div>    
         <p className="display-line-price">${(props.totalPerPerson / 100).toFixed(2)}</p>
       </div>
-      <button className="display-btn" onClick={props.handleResetButton}>Reset</button>
+      <button className={`display-btn ${props.hideReset ? 'display-btn-hide' : ''}`} onClick={props.handleResetButton}>Reset</button>
     </div>
   );
 }

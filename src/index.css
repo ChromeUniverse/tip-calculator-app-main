@@ -206,6 +206,11 @@ body {
   cursor: pointer;
 }
 
+.display-btn-hide {
+  background-color: #0d686d;
+  cursor: inherit;
+}
+
 @media (max-width: 750px) {
 
   body {

@@ -103,6 +103,7 @@ function App() {
           tipPerPerson={output.tipPerPerson}
           totalPerPerson={output.totalPerPerson}
           handleResetButton={handleResetButton}
+          hideReset={input.bill === 0 && input.people === 0}
         />
       </div>
     </main>
