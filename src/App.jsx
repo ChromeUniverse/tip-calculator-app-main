@@ -10,12 +10,8 @@ import validator from "validator";
 
 function App() {
 
-  const [input, setInput] = useState({
-    bill: 14555,
-    selectedTip: false,
-    customTip: 23,
-    people: 4,
-  });
+  const initialState = { bill: 0, selectedTip: false, customTip: 0, people: 0 };
+  const [input, setInput] = useState(initialState);
 
   const [errors, setErrors] = useState({
     bill: '',
@@ -88,8 +84,7 @@ function App() {
   }
 
   function handleResetButton() {
-    // console.log('clicked!');
-    setInput({ bill: 0, selectedTip: false, customTip: 0, people: 0 });
+    setInput(initialState);
   }
 
   return (
