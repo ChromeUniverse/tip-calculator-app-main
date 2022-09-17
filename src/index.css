@@ -106,6 +106,7 @@ body {
 .input {
   background-repeat: no-repeat;
   background-position: 15px center;
+  caret-color: transparent;
 }
 
 .input:focus-visible, .tips-grid-input:focus-visible {
@@ -159,6 +160,7 @@ body {
 .tips-grid-input {
   color: var(--grayish-cyan);
   background-color: var(--very-light-grayish-cyan);
+  caret-color: transparent;
 }
 
 .display {
