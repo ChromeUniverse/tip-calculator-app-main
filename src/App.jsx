@@ -38,7 +38,7 @@ function App() {
     }
 
     // check selected tip first, then check custom tip    
-    const tipPercentage = (input.selectedTip) ? tips[input.selectedTip] : input.customTip;
+    const tipPercentage = (input.selectedTip !== false) ? tips[input.selectedTip] : input.customTip;
     const tip = input.bill * (tipPercentage / 100);
     const billTotal = input.bill + tip;
 
