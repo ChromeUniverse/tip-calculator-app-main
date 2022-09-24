@@ -17,7 +17,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Space Mono';
-  user-select: none; 
+  /* user-select: none;  */
 }
 
 body {
@@ -106,7 +106,7 @@ body {
 .input {
   background-repeat: no-repeat;
   background-position: 15px center;
-  caret-color: transparent;
+  /* caret-color: transparent; */
 }
 
 .input:focus-visible, .tips-grid-input:focus-visible {

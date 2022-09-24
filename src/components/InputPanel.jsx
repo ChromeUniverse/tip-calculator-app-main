@@ -16,7 +16,8 @@ function InputPanel(props) {
         error={props.errors.bill}
         value={props.input.bill}
         type="bill"
-        handleKeyDown={props.handleKeyDown}
+        // handleKeyDown={props.handleKeyDown}
+        handleChange={props.handleChange}
       />
 
       <div className="tips">
@@ -48,7 +49,8 @@ function InputPanel(props) {
         error={props.errors.people}
         value={props.input.people}
         type="people"
-        handleKeyDown={props.handleKeyDown}
+        // handleKeyDown={props.handleKeyDown}
+        handleChange={props.handleChange}
       />
     </div>
   );

@@ -18,7 +18,8 @@ function InputLine(props) {
         className={`input ${props.error ? "input-error" : ""}`}
         type="text"
         value={props.type === 'bill' ? (props.value/100).toFixed(2) : props.value}
-        onKeyDown={(event) => props.handleKeyDown(event, props.type)}
+        // onKeyDown={(event) => props.handleKeyDown(event, props.type)}
+        onChange={(event) => props.handleChange(event, props.type)}
       />
     </div>
   );

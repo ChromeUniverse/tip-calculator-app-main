@@ -71,6 +71,23 @@ function App() {
     }
   }  
 
+  function handleChange(e, type) {
+
+    console.log(e.target.value, e.keyCode, type);
+
+    if (e.target.value === '') {
+      setInput((oldInput) => ({ ...oldInput, [type]: 0 }));
+    } else if (validator.isNumeric(e.target.value)) {
+      console.log('got here', validator.blacklist(e.target.value, '.'));
+      setInput((oldInput) => ({
+        ...oldInput,
+        [type]: Number(validator.blacklist(e.target.value, '.')),
+      }));
+    }
+  
+    
+  }
+
   function handleTipsClick(index) {
     if (input.selectedTip === index) {
       return setInput(oldInput => ({ ...oldInput, selectedTip: false }));
@@ -80,7 +97,8 @@ function App() {
 
   function handleCustomTip(event) {
     setInput(oldInput => ({ ...oldInput, selectedTip: false }));
-    handleKeyDown(event, 'customTip');
+    // handleKeyDown(event, 'customTip');
+    handleChange(event, 'customTip');
   }
 
   function handleResetButton() {
@@ -95,7 +113,8 @@ function App() {
           input={input}
           tips={tips}
           errors={errors}
-          handleKeyDown={handleKeyDown}
+          // handleKeyDown={handleKeyDown}
+          handleChange={handleChange}
           handleTipsClick={handleTipsClick}
           handleCustomTip={handleCustomTip}          
         />
